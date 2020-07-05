@@ -7,7 +7,6 @@ echo "$GITHUB_REF"
 git log --pretty=oneline -1
 git branch -a -vvv
 
-
 #echo "### Adding git remote..."
 #git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
 
