@@ -5,7 +5,7 @@ cd "$GITHUB_WORKSPACE"
 
 echo "$GITHUB_REF"
 git log --pretty=oneline -1
-
+git branch -a -vvv
 
 
 #echo "### Adding git remote..."
