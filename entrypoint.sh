@@ -3,7 +3,7 @@
 cd "$GITHUB_WORKSPACE"
 
 /run-clang-format.py $*
-ehco "$GITHUB_REF"
+echo "$GITHUB_REF"
 git log --pretty=oneline -1
 git config user.email "clang-formater@radium-engine.git"
 git config user.name "clang-formatter"
