@@ -35,7 +35,6 @@ runs:
   args:
     - --clang-format-executable /clang-format/clang-format${{ inputs.clangFormatVersion }}
     - -r
-    - -q
     - --style ${{ inputs.style }}
     - --extensions ${{ inputs.extensions }}
     - --exclude ${{ inputs.exclude }}
