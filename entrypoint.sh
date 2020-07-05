@@ -2,13 +2,13 @@
 
 cd "$GITHUB_WORKSPACE"
 
+/run-clang-format.py $*
+
+exit 0
 
 echo "$GITHUB_REF"
 git log --pretty=oneline -1
 git branch -a -vvv
-
-#echo "### Adding git remote..."
-#git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
 
 echo "### Getting branch"
 BRANCH=${GITHUB_REF#*refs/heads/}
