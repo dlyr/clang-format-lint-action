@@ -22,6 +22,7 @@ import signal
 import subprocess
 import sys
 import traceback
+from git import Repo
 
 from functools import partial
 
