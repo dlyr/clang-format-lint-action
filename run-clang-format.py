@@ -134,6 +134,9 @@ def run_clang_format_diff(args, file):
     if args.style:
       invocation.append('-style=' + args.style)
 
+    if args.inplace == true:
+      invocation.append('-i')
+
     # Use of utf-8 to decode the process output.
     #
     # Hopefully, this is the correct thing to do.
@@ -284,7 +287,11 @@ def main():
         '--style',
         help='Formatting style to use (default: file)',
         default='file')
-
+    parser.add_argument(
+        '--inplace',
+        help='Inplace edit (default: false)',
+        default='false')
+    
     args = parser.parse_args()
 
     # use default signal handling, like diff return SIGINT value on ^C

@@ -25,6 +25,10 @@ inputs:
     description: 'Formatting style to use'
     required: false
     default: 'file'
+  inplace:
+    description: 'Apply format to files'
+    required: false
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -34,4 +38,5 @@ runs:
     - --style ${{ inputs.style }}
     - --extensions ${{ inputs.extensions }}
     - --exclude ${{ inputs.exclude }}
+    - --inplace ${{ inputs.inplace }}
     - ${{ inputs.source }}
