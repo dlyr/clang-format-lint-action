@@ -38,5 +38,5 @@ runs:
     - --style ${{ inputs.style }}
     - --extensions ${{ inputs.extensions }}
     - --exclude ${{ inputs.exclude }}
-    - --inplace ${{ inputs.inplace }}
+#    - --inplace ${{ inputs.inplace }}
     - ${{ inputs.source }}

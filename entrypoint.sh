@@ -4,6 +4,7 @@ cd "$GITHUB_WORKSPACE"
 
 /run-clang-format.py $*
 
+git log --pretty=oneline -1
 git config user.email "clang-formater@radium-engine.git"
 git config user.name "clang-formatter"
 git commit -a -m"*** clang-format only ***"
